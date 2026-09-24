@@ -1,20 +1,20 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+﻿import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 
 const videos = [
   {
-    file: '/media/menu.mp4',
+    file: `${import.meta.env.BASE_URL}media/menu.mp4`,
     label: '01 / Folded menu',
     title: 'A menu that opens like a tiny stage'
   },
   {
-    file: '/media/gelato.mp4',
+    file: `${import.meta.env.BASE_URL}media/gelato.mp4`,
     label: '02 / Summer counter',
     title: 'Three scoops, one very good afternoon'
   },
   {
-    file: '/media/flower.mp4',
+    file: `${import.meta.env.BASE_URL}media/flower.mp4`,
     label: '03 / Peony study',
     title: 'A bloom caught between frames'
   }
@@ -294,7 +294,7 @@ function App() {
                   muted
                   loop
                   playsInline
-                  poster="/images/poster.svg"
+                  poster={`${import.meta.env.BASE_URL}images/poster.svg`}
                 />
                 <div className="media-overlay">
                   <span>View in Hero Full View 0{i + 1}</span>
